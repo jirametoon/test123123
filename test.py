@@ -5,7 +5,6 @@ import numpy as np
 import altair as alt
 import plotly.express as px
 
-
 st.title("Supplier-List")
 
 # Specify the file path with escaped backslashes
@@ -16,8 +15,6 @@ df = pd.read_csv(path)
 
 # Display the DataFrame
 st.write(df)
-
-
 
 df = pd.read_csv(path)
 
