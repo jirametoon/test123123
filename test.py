@@ -8,9 +8,10 @@ st.title("Supplier-List")
 
 # Specify the file path with escaped backslashes
 path = "C:\\Users\\Toon PC\\Desktop\\test123123\\Supplier-List.csv"
+uploaded_file = st.file_uploader(path)
 
 # Read the CSV file
-df = pd.read_csv(path)
+df = pd.read_csv(uploaded_file)
 
 # Display the DataFrame
 st.write(df)
