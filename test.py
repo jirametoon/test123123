@@ -6,11 +6,14 @@ import plotly.express as px
 
 st.title("Supplier-List")
 
-# Specify the file path with escaped backslashes
-path = "Supplier-List.csv"
+# Create a file uploader widget
+file = st.file_uploader("Upload CSV file", type=['csv'])
+
+while file is None:
+    continue
 
 # Read the CSV file
-df = pd.read_csv("Supplier-List.csv")
+df = pd.read_csv(file)
 
 # Display the DataFrame
 st.write(df)
