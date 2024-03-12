@@ -10,7 +10,7 @@ st.title("Supplier-List")
 path = "Supplier-List.csv"
 
 # Read the CSV file
-df = pd.read_csv(path)
+df = pd.read_csv("Supplier-List.csv")
 
 # Display the DataFrame
 st.write(df)
