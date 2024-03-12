@@ -7,16 +7,13 @@ import plotly.express as px
 st.title("Supplier-List")
 
 # Specify the file path with escaped backslashes
-path = "C:\\Users\\Toon PC\\Desktop\\test123123\\Supplier-List.csv"
-uploaded_file = st.file_uploader(path)
+path = r"C:/Users/Toon PC/Desktop/test123123/Supplier-List.csv"
 
 # Read the CSV file
-df = pd.read_csv(uploaded_file)
+df = pd.read_csv(path)
 
 # Display the DataFrame
 st.write(df)
-
-df = pd.read_csv(path)
 
 # Count occurrences of each country
 country_counts = df['Country RA'].value_counts().reset_index()
@@ -42,8 +39,6 @@ chart = alt.Chart(country_counts).mark_bar().encode(
 st.altair_chart(chart, use_container_width=True)
 
 ##################################################################################################
-
-df = pd.read_csv(path)
 
 # Count occurrences of each country
 country_counts = df['Country RA'].value_counts().reset_index()
@@ -98,9 +93,6 @@ chart = alt.Chart(group_counts).mark_bar().encode(
     width=600,
     height=400
 )
-
-# Display the Bar chart in Streamlit
-#st.altair_chart(chart, use_container_width=True)
 
 # Create Bar chart using Altair
 chart = alt.Chart(group_counts).mark_bar().encode(
