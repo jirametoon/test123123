@@ -7,7 +7,7 @@ import plotly.express as px
 st.title("Supplier-List")
 
 # Specify the file path with escaped backslashes
-path = "C:/Users/Toon PC/Desktop/test123123/Supplier-List.csv"
+path = "C:\\Users\\Toon PC\\Desktop\\test123123\\Supplier-List.csv"
 
 # Read the CSV file
 df = pd.read_csv(path)
